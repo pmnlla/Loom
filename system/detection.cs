@@ -18,7 +18,7 @@ namespace Loom
             dist = Environment.OSVersion.ToString();
             ver = dist.Split(' ');
 
-            if(ver[1] == "Unix") ver[1] = "linux";
+            if(ver[0] == "Unix"){ ver[0] = "Linux"; }
 
             Console.WriteLine(@"Running on {0}, kernel {1}", ver[0], ver[1]);
             
