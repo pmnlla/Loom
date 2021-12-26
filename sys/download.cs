@@ -9,10 +9,21 @@ using System.IO;
 
 namespace Loom
 {
-    public class Sys
+    public partial class Sys
     {
-        public static void dlmod(string url){
+        public void dlmod(string url, string file){
 
+            // ensure we have a url to download
+            if (url == null || url == ""){
+                Console.Write("E> Please specify a URL to download! \n\t (loom/sys/download.cs | func: dlmod) \n");
+                Environment.Exit(1);
+            }
+            // ensure we have a filename
+            if (file == null || file == ""){
+                Console.Write("E> Please specify a name for the file to download! \n\t (loom/sys/download.cs | func: dlmod \n");
+                Environment.Exit(1);
+            }
+            
             // make new webclient; `dlr` will be how we do web operations
             WebClient dlr = new WebClient();
 
@@ -23,8 +34,9 @@ namespace Loom
 
             // actual download operations | https://docs.microsoft.com/en-us/dotnet/api/system.net.webclient?view=net-6.0 
             Stream data = dlr.OpenRead (url);
-            
 
+            Console.WriteLine("I> Downloading File \"{0}\"", url);
+            dlr.DownloadFile(url, file);
 
         }
     }

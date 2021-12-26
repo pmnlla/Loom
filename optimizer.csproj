@@ -8,6 +8,5 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="Checkbox.cs" />
   </ItemGroup>
 </Project>

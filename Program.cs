@@ -16,6 +16,7 @@ namespace Loom // Note: actual namespace depends on the project name.
             Console.WriteLine(@"Welcome to Loom!");
             var OS = new Loom.Sys();
             OS.DetectParams();
+            // OS.dlmod("","");
         } 
     }
 }
