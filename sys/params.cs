@@ -13,17 +13,18 @@ namespace Loom
         public string dist = "";
         public string dir = "";
         
-        public void DetectParams(){
+        public void DetectParams(bool output){
             // detect OS version
             dist = Environment.OSVersion.ToString();
             ver = dist.Split(' ');
 
             if(ver[0] == "Unix"){ ver[0] = "Linux"; }
+            if(output == true) {
+                Console.WriteLine(@"I> Running on {0}, kernel {1}", ver[0], ver[1]);
 
-            Console.WriteLine(@"I> Running on {0}, kernel {1}", ver[0], ver[1]);
-
-            Console.WriteLine("---------------------");
-            getTargetDir();
+                Console.WriteLine("---------------------");
+                getTargetDir();
+            }
         }
 
         public void getTargetDir(){

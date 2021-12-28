@@ -6,16 +6,16 @@ using System.Collections.Generic;
 using System.Linq;
 
 
-
 namespace Loom // Note: actual namespace depends on the project name.
 {
     public class Program
     {
         public static void Main(string[] args) // A classic.
         {
+            ConsoleHelper.SetCurrentFont("Comic Sans", 12);
             Console.WriteLine(@"Welcome to Loom!");
             var OS = new Loom.Sys();
-            OS.DetectParams();
+            OS.DetectParams(false);
             // OS.dlmod("","");
         } 
     }
