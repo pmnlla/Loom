@@ -13,9 +13,11 @@ namespace Loom // Note: actual namespace depends on the project name.
     {
         public static void Main(string[] args) // A classic.
         {
-            Console.WriteLine(@"Welcome to Loom!");
+            Console.WriteLine("Welcome to Loom!");
             var OS = new Loom.Sys();
+            OS.PopulateArray();
             OS.DetectParams();
+            
             // OS.dlmod("","");
         } 
     }
