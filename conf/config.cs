@@ -15,6 +15,7 @@ namespace Loom
                                                        // Loom.Mod will be implemented in a later version.
         
         public List<Tuple<string, string, bool>> modlist = new List<Tuple<string,string,bool>>();
+
         public void PopulateArray(){
             string path = (Directory.GetCurrentDirectory() + "/config.json");
 
@@ -33,16 +34,10 @@ namespace Loom
             for (int i = 0; i < (value.Length - 1); i++){
                 // parse entry into dict
                 Dictionary<string, string> unformattedList = JsonConvert.DeserializeObject<Dictionary<string, string>>(value[i]);
-                Console.WriteLine(i.ToString());
-                // take dict entries and put them in modlist dict
-                // (string, bool) modMetadata = (unformattedList["Url"], Convert.ToBoolean(unformattedList["Use"]));
+
+                // take dict entries and put them in modlist list of tuples
                 var values = Tuple.Create(unformattedList["Name"], unformattedList["Url"], Convert.ToBoolean(unformattedList["Use"]));
                 modlist.Add(values);
-                /*
-                modlist[(i+1)].Url = unformattedList["Url"];
-                modlist[(i+1)].Name = unformattedList["Name"];
-                modlist[(i+1)].Use = Convert.ToBoolean(unformattedList["Use"]);
-                */
             }
         } 
 
