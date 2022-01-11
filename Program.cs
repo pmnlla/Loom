@@ -38,9 +38,14 @@ namespace Loom // Note: actual namespace depends on the project name.
                 //Console.WriteLine();
                 i++;
             }
-            var cbox = new Checkbox.Checkbox(title, opts);
+            var cbox = new Checkbox.Checkbox(title, true, false, opts);
             var output = cbox.Select();
-            Console.Write(Environment.NewLine + @output);
+
+            foreach(var returnValue in output){
+
+                Console.Write(@returnValue.Index + " " + @returnValue.Option + Environment.NewLine);
+
+            }
             
         }
     }
