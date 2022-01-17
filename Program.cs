@@ -24,16 +24,16 @@ namespace Loom // Note: actual namespace depends on the project name.
             var OS = new Loom.Sys();
             OS.PopulateArray();
 
-            string title = "Please select the mods you would like to install:";
+            string title = "Please select the mods you would like to install. \nPlease do note that mods found on CurseForge and not Modrinth are unavailable due to the way that Curseforge's CDN works. \nNONE OF THE MODS INSTALL AUTOMATICALLY AT THE MOMENT.";
             // for (int i = 0; i > OS.modlist.Count; i++){
             int i = 0;
-            foreach (Tuple<string, string, bool> mod in OS.modlist){
+            foreach (modProperties mod in OS.modlist){
                 try{
-                    opts[i] = mod.Item1;
+                    opts[i] = mod.Name;
                 }
                 catch (Exception e){
                     Array.Resize(ref opts, opts.Length + 1);
-                    opts[i] = mod.Item1;
+                    opts[i] = mod.Name;
                 }
                 //Console.WriteLine();
                 i++;
@@ -42,9 +42,13 @@ namespace Loom // Note: actual namespace depends on the project name.
             var output = cbox.Select();
 
             foreach(var returnValue in output){
-
                 Console.Write(@returnValue.Index + " " + @returnValue.Option + Environment.NewLine);
 
+                OS.modlist[returnValue.Index].Use = true;
+            }
+            // debugging
+            foreach (modProperties mod in OS.modlist){
+                Console.Write(@mod.Use + Environment.NewLine);
             }
             
         }

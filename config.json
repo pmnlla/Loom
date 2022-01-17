@@ -1,5 +1,19 @@
-{"Url":"https://www.example.com","Name":"test0","Use":true}
-{"Url":"https://www.example.com","Name":"test1","Use":true}
-{"Url":"https://www.example.com","Name":"test2","Use":true}
-{"Url":"https://www.example.com","Name":"test3","Use":true}
-{"Url":"https://www.example.com","Name":"test4","Use":true}
+{"Url":"https://cdn.modrinth.com/data/P7dR8mSH/versions/0.46.1+1.18/fabric-api-0.46.1+1.18.jar","Name":"Fabric API (Required)","Use":false}
+{"Url":"https://cdn.modrinth.com/data/AANobbMI/versions/mc1.18.1-0.4.0-alpha6/sodium-fabric-mc1.18.1-0.4.0-alpha6+build.14.jar","Name":"Sodium (Currently Unstable)","Use":false}
+{"Url":"https://cdn.modrinth.com/data/PtjYWJkn/versions/mc1.18.1-0.3.8/sodium-extra-mc1.18.1-0.3.8.jar","Name":"Sodium Extra (Requires Sodium)","Use":false}
+{"Url":"https://cdn.modrinth.com/data/Orvt0mRa/versions/1.0.2-alpha2+mc1.18.1/indium-1.0.2-alpha2+mc1.18.1.jar","Name":"Indium","Use":false}
+{"Url":"https://cdn.modrinth.com/data/gvQqBUqZ/versions/mc1.18.1-0.7.7/lithium-fabric-mc1.18.1-0.7.7.jar","Name":"Lithium","Use":false}
+{"Url":"https://cdn.modrinth.com/data/H8CaAYZC/versions/Starlight%201.0.0%201.18.x/starlight-1.0.0+fabric.d0a3220.jar","Name":"Starlight","Use":false}
+{"Url":"https://cdn.modrinth.com/data/fQEb0iXm/versions/0.1.6/krypton-0.1.6.jar","Name":"Krypton (Unstable)","Use":false}
+{"Url":"https://cdn.modrinth.com/data/ZfQ3kTvR/versions/3.0-rc11-1.18/dashloader-def-3.0-rc11-1.18.jar","Name":"DashLoader","Use":false}
+{"Url":"https://cdn.modrinth.com/data/GNxdLCoP/versions/2.3.2/cullleaves-2.3.2.jar","Name":"Cull Leaves","Use":false}
+{"Url":"https://cdn.modrinth.com/data/LQ3K71Q1/versions/v2.1.0/dynamic-fps-2.1.0.jar","Name":"Dynamic FPS","Use":false}
+{"Url":"https://cdn.modrinth.com/data/kKwy3HU9/versions/1.2.0/betterbeds-1.2.0.jar","Name":"Better Beds","Use":false}
+{"Url":"https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar","Name":"LazyDFU","Use":false}
+{"Url":"https://github.com/UltimateBoomer/mc-smoothboot/releases/download/1.18-1.7.0/smoothboot-fabric-1.18-1.7.0.jar","Name":"Smooth Boost","Use":false}
+{"Url":"https://cdn.modrinth.com/data/2Uev7LdA/versions/1.2.2+1.17/lambdabettergrass-1.2.2+1.17.jar","Name":"LambdaBetterGrass (Requires Indium)","Use":false}
+{"Url":"https://cdn.modrinth.com/data/yBW8D80W/versions/2.1.0+1.17/lambdynamiclights-2.1.0+1.17.jar","Name":"LambDynamicLights","Use":false}
+{"Url":"https://cdn.modrinth.com/data/aXf2OSFU/versions/5.0.0-beta.3+1.17.1/okzoomer-5.0.0-beta.3+1.17.1.jar","Name":"Ok Zoomer","Use":false}
+{"Url":"https://github.com/A5b84/dark-loading-screen/releases/download/v1.6.11/dark-loading-screen-1.6.11-dev.jar","Name":"Dark Loading Screen","Use":false}
+{"Url":"https://cdn.modrinth.com/data/mOgUt4GM/versions/3.0.1/modmenu-3.0.1.jar","Name":"Mod Menu","Use":false}
+

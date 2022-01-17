@@ -23,11 +23,12 @@ Please ensure your mods folder is empty, otherwsie this would result in conflict
 ## How to build
 0. Ensure you have the dotnet CLI installed.
 1. Clone the repository
-2. cd (standard) or z (zoxide) into the folder using a shell such as bash or cmd.
-3. `dotnet build`. The result should be in your /bin folder, with a file that ends with either exe or nothing, and some dependencies.
+2. cd or zoxide into the folder using a shell such as bash or cmd.
+3. `$ dotnet build`. The result should be in your /bin folder, with a file that ends with either exe or nothing, and some dependencies.
     **Please note that the executable does not contain it's own dependencies yet, and would need to be shipped with a redistributable.**
 
 
 ## Acknowledgements
 - https://github.com/LarsVomMars/Checkboxes | MIT License
 - https://gitignore.io
+- Newtonsoft JSON library

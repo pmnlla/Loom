@@ -14,7 +14,7 @@ namespace Loom
         // public Loom.Mod[] modlist = new Loom.Mod[]; // as of now, the only place I can store mod info in is a list. 
                                                        // Loom.Mod will be implemented in a later version.
         
-        public List<Tuple<string, string, bool>> modlist = new List<Tuple<string,string,bool>>();
+        public List<modProperties> modlist = new List<modProperties>();
 
         public void PopulateArray(){
             string path = (Directory.GetCurrentDirectory() + "/config.json");
@@ -31,19 +31,23 @@ namespace Loom
             string[] value = input.Split(Environment.NewLine); 
             
             // parse the json
-            for (int i = 0; i < (value.Length - 1); i++){
+            for (int i = 0; i < (value.Length - 2); i++){
                 // parse entry into dict
                 Dictionary<string, string> unformattedList = JsonConvert.DeserializeObject<Dictionary<string, string>>(value[i]);
 
-                // take dict entries and put them in modlist list of tuples
-                var values = Tuple.Create(unformattedList["Name"], unformattedList["Url"], Convert.ToBoolean(unformattedList["Use"]));
+                // take dict entries and put them in modlist list of class modProperties
+                var values = new modProperties();
+                values.Name = unformattedList["Name"];
+                values.Url = unformattedList["Url"];
+                values.Use = Convert.ToBoolean(unformattedList["Use"]);
                 modlist.Add(values);
+                Console.Write(i.ToString());
             }
         } 
 
         // what you will see below is an undocumented mess. this simply creates an example config file to work with while working on the parser.
         public void testVoid(){
-            var mods = new Mod();
+            var mods = new modProperties();
             string path = @"./config.json";
             string json = "";
             for(int i = 0; i < 5; i++){
