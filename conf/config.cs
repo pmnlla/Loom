@@ -21,9 +21,10 @@ namespace Loom
 
             Loom.Sys OS = new Loom.Sys();
 
-            /* if (!File.Exists(path)){
-                testVoid(); //TODO: replace this with something that downloads an actual config
-            }*/
+             if (!File.Exists(path)){
+                // testVoid(); //TODO: replace this with something that downloads an actual config
+                OS.dlmod("https://raw.githubusercontent.com/pomonella01/Loom/master/config.json", path);
+                }
 
             // take json file and split each line into an entry in an array
             string input = File.ReadAllText(path);
