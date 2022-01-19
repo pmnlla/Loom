@@ -13,15 +13,17 @@ namespace Loom // Note: actual namespace depends on the project name.
         public static string[] opts = {};
         public static void Main(string[] args) // A classic.
         {
+            // start tthis shit
             Console.WriteLine("Welcome to Loom!");
+            
+            Checklist();
+        } 
+
+        // this does the echecklist stuff
+        public static void Checklist(){
+            // TODO // pass OS to this function instead of creating a new one for garbage collection purposes
             var OS = new Loom.Sys();
             OS.DetectParams();
-            Checklist();
-            // OS.dlmod("","");
-        } 
-        public static void Checklist(){
-
-            var OS = new Loom.Sys();
             OS.PopulateArray();
 
             string title = "Please select the mods you would like to install. \nPlease do note that mods found on CurseForge and not Modrinth are unavailable due to the way that Curseforge's CDN works. \nNONE OF THE MODS INSTALL AUTOMATICALLY AT THE MOMENT.";
@@ -35,20 +37,19 @@ namespace Loom // Note: actual namespace depends on the project name.
                     Array.Resize(ref opts, opts.Length + 1);
                     opts[i] = mod.Name;
                 }
-                //Console.WriteLine();
                 i++;
             }
             var cbox = new Checkbox.Checkbox(title, true, false, opts);
             var output = cbox.Select();
 
             foreach(var returnValue in output){
-                Console.Write(@returnValue.Index + " " + @returnValue.Option + Environment.NewLine);
-
                 OS.modlist[returnValue.Index].Use = true;
             }
             // debugging
             foreach (modProperties mod in OS.modlist){
-                Console.Write(@mod.Use + Environment.NewLine);
+                if (mod.Use == true){
+                    OS.dlmod(mod.Url, (OS.dir.ToString() + "/mods/" + mod.Name + ".jar"));
+                }
             }
             
         }
