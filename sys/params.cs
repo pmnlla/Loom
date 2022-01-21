@@ -18,7 +18,7 @@ namespace Loom
             dist = Environment.OSVersion.ToString();
             ver = dist.Split(' ');
 
-            if(ver[0] == "Unix"){ ver[0] = "Linux/Unix"; }
+            if(ver[0] == "Unix"){ ver[0] = "Linux/Unix"; } else { ver[1] = ver[2] }
 
             Console.WriteLine(@"I> Running on {0}, kernel {1}", ver[0], ver[1]);
 
@@ -35,7 +35,7 @@ namespace Loom
             
             // simple checks to ensure that the directories exist
             if(Directory.Exists(dir)){
-                Console.WriteLine("Found Minecraft directory!");
+                Console.WriteLine("I> Found Minecraft directory!");
                 if(Directory.Exists(dir + "/mods")){
                     Console.WriteLine("I> Found mods directory!");
                     Console.Beep();
@@ -48,7 +48,7 @@ namespace Loom
                 // and if it does, we need to parse the name for every single file to extract the fabric version and minecraft version.
                 // we need to do it this way in order to ensure that no version number change will make it so that this test isn't passed,
                 // and ideally we should be getting the version numbers from Fabric's and Mojang's (dead corpse's) servers respectively.
-            /*    
+                
                 if(Directory.Exists(dir + ".fabric")){
                     Console.WriteLine("I> Fabric modloader detected! Verifying latest version is installed...");
                     if(File.Exists(dir + ".fabric/remappedJars/minecraft-1.18.1-0.12.12")){
@@ -61,7 +61,7 @@ namespace Loom
                 else
                 {
                     Console.WriteLine("E> Fabric not found! Please install Fabric version 0.12.12 for Minecraft 1.18.1");
-                } */
+                } 
             } else {
                 Console.WriteLine("E> Unable to find Minecraft directory at {0}", dir);
             }

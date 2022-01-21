@@ -15,12 +15,12 @@ namespace Loom
 
             // ensure we have a url to download
             if (url == null || url == ""){
-                Console.Write("E> Please specify a URL to download! \n\t (loom/sys/download.cs | func: dlmod) \n");
+                Console.Write("E> Please specify a URL to download! | This error most likely indicates an issue with the config file. Be sure all the links are present. ");
                 Environment.Exit(1);
             }
             // ensure we have a filename
             if (file == null || file == ""){
-                Console.Write("E> Please specify a name for the file to download! \n\t (loom/sys/download.cs | func: dlmod \n");
+                Console.Write("E> Please specify a name for the file to download! | This error most likely indicates an issue with the config file. Be sure all the names are present. ");
                 Environment.Exit(1);
             }
             

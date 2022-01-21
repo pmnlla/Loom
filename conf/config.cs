@@ -17,10 +17,12 @@ namespace Loom
         public List<modProperties> modlist = new List<modProperties>();
 
         public void PopulateArray(){
-            string path = (Directory.GetCurrentDirectory() + "/config.json");
 
+            // variable setup; configure config file path, create loom.sys for file operations
+            string path = (Directory.GetCurrentDirectory() + "/config.json");
             Loom.Sys OS = new Loom.Sys();
 
+            // what to do if file does not exist
              if (!File.Exists(path)){
                 // testVoid(); //TODO: replace this with something that downloads an actual config
                 OS.dlmod("https://raw.githubusercontent.com/pomonella01/Loom/master/config.json", path);
