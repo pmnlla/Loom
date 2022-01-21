@@ -18,7 +18,7 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build
     - name: Publish
-      run: dotnet publish -c Release -r win10-x64 --no-build --self-contained true --version-suffix 0.9.0 -p:PublishSingleFile=true
+      run: dotnet publish -c Release -r win10-x64 -self-contained true --version-suffix 0.9.0 -p:PublishSingleFile=true
     
