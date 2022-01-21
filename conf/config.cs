@@ -24,13 +24,11 @@ namespace Loom
 
             // what to do if file does not exist
              if (!File.Exists(path)){
-                // testVoid(); //TODO: replace this with something that downloads an actual config
                 OS.dlmod("https://raw.githubusercontent.com/pomonella01/Loom/master/config.json", path);
                 }
 
             // take json file and split each line into an entry in an array
             string input = File.ReadAllText(path);
-            //Console.WriteLine(value);
             string[] value = input.Split(Environment.NewLine); 
             
             // parse the json
@@ -50,6 +48,7 @@ namespace Loom
 
         // what you will see below is an undocumented mess. this simply creates an example config file to work with while working on the parser.
         public void testVoid(){
+            Console.Write("testvoid() is deprecated!");
             var mods = new modProperties();
             string path = @"./config.json";
             string json = "";
