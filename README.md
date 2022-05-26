@@ -1,10 +1,20 @@
-# Loom
+# Phosphorus: an external mod manager for Minecraft.
 
 [![forthebadge](https://forthebadge.com/images/badges/does-not-contain-treenuts.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/made-with-out-pants.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/powered-by-coffee.svg)](https://forthebadge.com)
 
-A simple mods installer for Minecraft. 
+---
+
+**Notice**
+
+This is a TUI rewrite of the original version of Loom. The first version is available on the master branch.
+
+Please do not file in issues yet. I am likely aware of any inconsistencies. 
+
+Feel free to compile this version, but please beware that I am not obligated to provide any support, as this version is far from done.
+
+---
 
 Loom installs a series of mods outlined in `vortck`'s guide on Github Gist. 
 While the guide is made for 1.16.5, all the mods are actively maintained and supported.
@@ -29,6 +39,6 @@ Please ensure your mods folder is empty, otherwsie this would result in conflict
 
 
 ## Acknowledgements
-- https://github.com/LarsVomMars/Checkboxes | MIT License
+- Terminal.GUI lib
 - https://gitignore.io
 - Newtonsoft JSON library
