@@ -8,7 +8,8 @@ namespace Phosphorus{
         public void init() {
 
             Application.Init();
-            setupCheckboxes(Application.Top);
+            
+            // set up menubar 
             var menu = new MenuBar (new MenuBarItem [] {
                 new MenuBarItem ("_File", new MenuItem [] {
                     new MenuItem ("_Quit", "", () => { 
@@ -17,7 +18,18 @@ namespace Phosphorus{
                 }),
             });
             Application.Top.Add (menu);
-            setupCheckboxes(Application.Top);
+
+            // set up main window
+			var Win = new Window ($"CTRL-Q to Close - Phosphorus v0.0-curses") {
+				X = 0,
+				Y = 1,
+				Width = Dim.Fill (),
+				Height = Dim.Fill (),
+			};
+			Application.Top.Add (Win);
+
+            
+            // setupCheckboxes(Application.Top);
             Application.Run();
             Application.Shutdown();
 
