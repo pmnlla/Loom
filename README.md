@@ -1,3 +1,7 @@
+# Notice
+I, the developer of this project, have failed to maintain it past fabric 12.2 amd minecraft 1.18.2. I could make excuses for this, but it mostly boils down to me not wanting to deal with updating the config file every time.
+However, I do have an idea on how to make versions update by themselves using the modrinth API. I'll implement it... some day. I'm not exactly sure when. But you can cry in the issues to make me think about it more.
+
 # Loom
 
 [![forthebadge](https://forthebadge.com/images/badges/does-not-contain-treenuts.svg)](https://forthebadge.com)
