@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace Phosphorus
 {
+
     public class modProperties
     {
         public string Url {get; set;}

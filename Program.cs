@@ -6,16 +6,18 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Phosphorus;
+using Phosphorus.Utils;
 
 namespace Phosphorus // Note: actual namespace depends on the project name.
 {
     public class Program
     {
+       
         public static string[] opts = {};
         public static void Main(string[] args) // A classic.
         {
             // start tthis shit
-            Console.WriteLine("phosphorus amogus");
+            Logging.Log(ErrPrefix.Info, "phosphorus amogus");
             
             var core = new Phosphorus.Core();
             core.DetectParams();

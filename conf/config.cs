@@ -18,7 +18,7 @@ namespace Phosphorus
 
             // variable setup; configure config file path, create loom.sys for file operations
             string path = (Directory.GetCurrentDirectory() + "/config.json");
-            Phosphorus.Sys OS = new Phosphorus.Sys();
+            Phosphorus.Core OS = new Phosphorus.Core();
 
             // what to do if file does not exist
              if (!File.Exists(path)){
