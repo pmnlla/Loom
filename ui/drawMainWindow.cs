@@ -1,11 +1,13 @@
 using System;
 using Terminal.Gui;
 
+using Phosphorus;
+
 namespace Phosphorus{
 
     public partial class mainWindow{
 
-        public void init() {
+        public void init(Phosphorus.Sys OS) {
 
             Application.Init();
             
@@ -20,7 +22,7 @@ namespace Phosphorus{
             Application.Top.Add (menu);
 
             // set up main window
-			var Win = new Window ($"CTRL-Q to Close - Phosphorus v0.0-curses") {
+			var Win = new Window ($"CTRL-Q to Close - Phosphorus v0.0b-curses") {
 				X = 0,
 				Y = 1,
 				Width = Dim.Fill (),
@@ -28,17 +30,20 @@ namespace Phosphorus{
 			};
 			Application.Top.Add (Win);
 
-            
-            // setupCheckboxes(Application.Top);
+            setupCheckboxes(Win, OS.modlist); // set up the checkboxes
+
             Application.Run();
             Application.Shutdown();
 
         }
-        public async void setupCheckboxes(View selectionView) {
+        public async void setupCheckboxes(View selectionView, List<modProperties> mods) {
             
-            for (int i = 0; i < 5; i++){
-                var checkbox = new CheckBox (0, i+1, "test");
+            int i = 0;
+            foreach (modProperties mod in mods)
+            {
+                var checkbox = new CheckBox (0, i, mod.Name);
                 selectionView.Add(checkbox);
+                i++;
             }
 
         }

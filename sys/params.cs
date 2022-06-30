@@ -6,9 +6,9 @@ using System.Windows;
 // using System.Windows.Forms;
 using System.Linq;
 
-namespace Loom
+namespace Phosphorus
 {    
-    public partial class Sys{
+    public partial class Sys {
         public string[] ver;
         public string dist = "";
         public string dir = "";

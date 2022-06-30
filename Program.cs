@@ -7,7 +7,7 @@ using System.Linq;
 
 using Phosphorus;
 
-namespace Loom // Note: actual namespace depends on the project name.
+namespace Phosphorus // Note: actual namespace depends on the project name.
 {
     public class Program
     {
@@ -15,10 +15,14 @@ namespace Loom // Note: actual namespace depends on the project name.
         public static void Main(string[] args) // A classic.
         {
             // start tthis shit
-            Console.WriteLine("done");
+            Console.WriteLine("phosphorus amogus");
             
+            var OS = new Phosphorus.Sys();
+            OS.DetectParams();
+            OS.PopulateArray();
+
             mainWindow win = new mainWindow();
-            win.init();
+            win.init(OS);
         }
     }
 }

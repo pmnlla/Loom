@@ -5,14 +5,12 @@ using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
 
-using Loom;
+using Phosphorus;
 
-namespace Loom
+namespace Phosphorus
 {
     public partial class Sys
     {
-        // public Loom.Mod[] modlist = new Loom.Mod[]; // as of now, the only place I can store mod info in is a list. 
-                                                       // Loom.Mod will be implemented in a later version.
         
         public List<modProperties> modlist = new List<modProperties>();
 
@@ -20,7 +18,7 @@ namespace Loom
 
             // variable setup; configure config file path, create loom.sys for file operations
             string path = (Directory.GetCurrentDirectory() + "/config.json");
-            Loom.Sys OS = new Loom.Sys();
+            Phosphorus.Sys OS = new Phosphorus.Sys();
 
             // what to do if file does not exist
              if (!File.Exists(path)){
