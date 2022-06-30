@@ -17,12 +17,12 @@ namespace Phosphorus // Note: actual namespace depends on the project name.
             // start tthis shit
             Console.WriteLine("phosphorus amogus");
             
-            var OS = new Phosphorus.Sys();
-            OS.DetectParams();
-            OS.PopulateArray();
+            var core = new Phosphorus.Core();
+            core.DetectParams();
+            core.PopulateArray();
 
             mainWindow win = new mainWindow();
-            win.init(OS);
+            win.init(core);
         }
     }
 }

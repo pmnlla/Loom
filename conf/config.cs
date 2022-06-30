@@ -9,7 +9,7 @@ using Phosphorus;
 
 namespace Phosphorus
 {
-    public partial class Sys
+    public partial class Core
     {
         
         public List<modProperties> modlist = new List<modProperties>();

@@ -7,7 +7,7 @@ namespace Phosphorus{
 
     public partial class mainWindow{
 
-        public void init(Phosphorus.Sys OS) {
+        public void init(Phosphorus.Core core) {
 
             Application.Init();
             
@@ -30,7 +30,7 @@ namespace Phosphorus{
 			};
 			Application.Top.Add (Win);
 
-            setupCheckboxes(Win, OS.modlist); // set up the checkboxes
+            setupCheckboxes(Win, core.modlist); // set up the checkboxes
 
             Application.Run();
             Application.Shutdown();

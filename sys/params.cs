@@ -8,7 +8,7 @@ using System.Linq;
 
 namespace Phosphorus
 {    
-    public partial class Sys {
+    public partial class Core {
         public string[] ver;
         public string dist = "";
         public string dir = "";

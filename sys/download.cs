@@ -9,7 +9,7 @@ using System.IO;
 
 namespace Phosphorus
 {
-    public partial class Sys
+    public partial class Core
     {
         public void dlmod(string url, string file){
 
